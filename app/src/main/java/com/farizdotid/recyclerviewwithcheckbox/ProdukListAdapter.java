@@ -2,7 +2,6 @@ package com.farizdotid.recyclerviewwithcheckbox;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,7 @@ public class ProdukListAdapter extends RecyclerView.Adapter<ProdukListAdapter.My
 
     @Override
     public ProdukListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View rootView = inflater.inflate(R.layout.list_item_nomor, parent, false);
+        View rootView = inflater.inflate(R.layout.list_item_produk, parent, false);
 
         MyViewHolder holder = new MyViewHolder(rootView);
         return holder;
@@ -68,8 +67,10 @@ public class ProdukListAdapter extends RecyclerView.Adapter<ProdukListAdapter.My
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                    if (isChecked){
+                       // KONDISI PADA SAAT CEKLIS
                        Toast.makeText(mContext, "checklist", Toast.LENGTH_SHORT).show();
                    } else {
+                       // KONDISI PADA SAAT CEKLIS DIHILANGKAN
                        Toast.makeText(mContext, "unchecklist", Toast.LENGTH_SHORT).show();
                    }
                 }
